@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const passcode = '121212';
 const ME = 'Ue08d728ebd826941b468d24561ef64a7';
 
-const SITE_NAME = '西屯';
+const SITE_NAME = '淡水';
 const aqiOpt = {
     uri: "http://opendata2.epa.gov.tw/AQI.json",
     json: true
