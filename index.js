@@ -1,4 +1,4 @@
-const linebot = require('../index.js');
+const linebot = require('linebot');
 const express = require('express');
 
 const bot = linebot({
