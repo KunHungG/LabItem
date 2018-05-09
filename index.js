@@ -135,6 +135,11 @@ bot.on('message', function(event) {
                         return event.reply('https://www.google.com.tw/search?q=' + event.message.text);
                     });
                     break;
+                case '拉麵':
+                    event.source.profile().then(function(profile) {
+                        return event.reply('http://anikolife.com/ramen-lazybag/');
+                    });
+                    break;
                 default:
                     event.source.profile().then(function(profile) {
                         return event.reply(profile.displayName + '說：' + event.message.text);
