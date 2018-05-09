@@ -140,6 +140,11 @@ bot.on('message', function(event) {
                         return event.reply('http://anikolife.com/ramen-lazybag/');
                     });
                     break;
+                case '吃什麼':
+                    event.source.profile().then(function(profile) {
+                        return event.reply('吃大便');
+                    });
+                    break;
                 default:
                     event.source.profile().then(function(profile) {
                         return event.reply(profile.displayName + '說：' + event.message.text);
