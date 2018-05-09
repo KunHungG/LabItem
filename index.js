@@ -132,7 +132,7 @@ bot.on('message', function(event) {
                     break;
                 default:
                     event.source.profile().then(function(profile) {
-                        return event.reply(profile.displayName + '說：' + even.message.text);
+                        return event.reply(profile.displayName + '說：' + event.message.text);
                     });
                     break;
             }
