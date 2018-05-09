@@ -130,6 +130,11 @@ bot.on('message', function(event) {
                         return event.reply('Hello ' + profile.displayName + ' ' + profile.userId);
                     });
                     break;
+                default:
+                    event.source.profile().then(function(profile) {
+                        return event.reply(profile.displayName + '說：' + even.message.text);
+                    });
+                    break;
             }
             break;
         case 'sticker':
