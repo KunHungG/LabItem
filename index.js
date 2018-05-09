@@ -134,6 +134,7 @@ bot.on('message', function(event) {
                     event.source.profile().then(function(profile) {
                         return event.reply('https://www.google.com.tw/search?q=' + event.message.text);
                     });
+                    break;
                 default:
                     event.source.profile().then(function(profile) {
                         return event.reply(profile.displayName + '說：' + event.message.text);
