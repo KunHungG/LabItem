@@ -130,6 +130,10 @@ bot.on('message', function(event) {
                         return event.reply('Hello ' + profile.displayName + ' ' + profile.userId);
                     });
                     break;
+                case '美食':
+                    event.source.profile().then(function(profile) {
+                        return event.reply('https://www.google.com.tw/search?q=' + event.message.text);
+                    });
                 default:
                     event.source.profile().then(function(profile) {
                         return event.reply(profile.displayName + '說：' + event.message.text);
