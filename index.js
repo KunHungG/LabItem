@@ -110,7 +110,7 @@ app.get('*', function(req, res) {
 bot.on('message', function(event) {
     switch (event.message.type) {
         case 'text':
-            if (events.message.text.indexOf('淡水空氣') > 0) {
+            if (event.message.text.indexOf('淡水空氣') > 0) {
                 let data;
                 rp(aqiOpt)
                     .then(function(repos) {
@@ -124,7 +124,7 @@ bot.on('message', function(event) {
                     });
             }
 
-            if (events.message.text.indexOf('吃什麼') > 0) {
+            if (event.message.text.indexOf('吃什麼') > 0) {
                 event.source.profile().then(function(profile) {
                     return event.reply('吃大便');
                 });
@@ -137,7 +137,7 @@ bot.on('message', function(event) {
                 break;
             }
 
-            if (events.message.text.indexOf('查詢') > 0) {
+            if (event.message.text.indexOf('查詢') > 0) {
                 event.source.profile().then(function(profile) {
                     return event.reply('https://www.google.com.tw/search?q=' + event.message.text.substr(3));
                 });
