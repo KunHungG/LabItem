@@ -110,38 +110,6 @@ app.get('*', function(req, res) {
 bot.on('message', function(event) {
     switch (event.message.type) {
         case 'text':
-            if (event.message.text.indexOf('淡水空氣') != -1) {
-                let data;
-                rp(aqiOpt)
-                    .then(function(repos) {
-                        data = readAQI(repos);
-                        event.reply(data.County + data.SiteName +
-                            '\nPM2.5指數：' + data["PM2.5_AVG"] +
-                            '\n狀態：' + data.Status);
-                    })
-                    .catch(function(err) {
-                        event.reply('無法取得空氣品質資料～');
-                    });
-            }
-
-            if (event.message.text.indexOf('吃什麼') != -1) {
-                event.source.profile().then(function(profile) {
-                    event.reply('吃大便');
-                });
-            }
-
-            if (events.message.text.indexOf('拉麵') != -1) {
-                event.source.profile().then(function(profile) {
-                    event.reply('http://anikolife.com/ramen-lazybag/');
-                });
-            }
-
-            if (event.message.text.indexOf('查詢') != -1) {
-                event.source.profile().then(function(profile) {
-                    event.reply('https://www.google.com.tw/search?q=' + event.message.text.substr(3));
-                });
-            }
-            /*
             switch (event.message.text) {
                 case '空氣':
                     let data;
@@ -177,14 +145,12 @@ bot.on('message', function(event) {
                     });
                     break;
                 default:
-                    
+
                     event.source.profile().then(function(profile) {
                         return event.reply(profile.displayName + '說：' + event.message.text);
                     });
-                    
                     break;
             }
-            */
             break;
         case 'sticker':
             /*
