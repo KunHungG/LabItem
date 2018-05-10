@@ -132,7 +132,7 @@ bot.on('message', function(event) {
                 event.reply('吃大便');
             }
 
-            if ((event.message.text.indexOf('幫掛') != -1 || event.message.text.indexOf('請') != -1) && (event.message.text.indexOf(' off') != -1 || event.message.text.indexOf('小時') != -1)) {
+            if ((event.message.text.indexOf('掛') != -1 || event.message.text.indexOf('請') != -1) && (event.message.text.indexOf(' off') != -1 || event.message.text.indexOf('小時') != -1)) {
                 event.reply('不準，我要跟課長說你曠職！！');
             }
 
