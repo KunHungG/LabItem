@@ -111,7 +111,11 @@ bot.on('message', function(event) {
     switch (event.message.type) {
         case 'text':
             if (event.message.text.indexOf('查詢') != -1) {
-                event.reply('https://www.google.com.tw/search?q=' + event.message.text.substr(event.message.text.indexOf('查詢') + 1).replace(/\s+/g, '+'));
+                event.reply('https://www.google.com.tw/search?q=' + event.message.text.substr(event.message.text.indexOf('查詢') + 2).replace(/\s+/g, '+'));
+            }
+
+            if (event.message.text.indexOf('搜尋') != -1) {
+                event.reply('https://www.google.com.tw/search?q=' + event.message.text.substr(event.message.text.indexOf('搜尋') + 2).replace(/\s+/g, '+'));
             }
 
             if (event.message.text.indexOf('淡水空氣') != -1) {
