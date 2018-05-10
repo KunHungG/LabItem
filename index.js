@@ -139,31 +139,31 @@ bot.on('message', function(event) {
             if ((event.message.text.indexOf('掛') != -1 || event.message.text.indexOf('請') != -1 || event.message.text.toLowerCase().indexOf('hr') != -1) && (event.message.text.toLowerCase().indexOf(' off') != -1 || event.message.text.indexOf('小時') != -1)) {
                 event.reply('不準，我要跟課長說你曠職！！');
             }
+            event.source.profile().then(function(profile) {
+                if (profile.displayName == '張秀玉Christine' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
+                    event.reply('小玉姐姐，妳總是那麼的年輕可愛！！');
+                }
 
-            if (profile.displayName == '張秀玉Christine' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
-                event.reply('小玉姐姐，妳總是那麼的年輕可愛！！');
-            }
+                if (profile.displayName == '張雅玲' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
+                    event.reply('雅玲姐姐，妳的眼睛似乎有比較大囉！！');
+                }
 
-            if (profile.displayName == '張雅玲' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
-                event.reply('雅玲姐姐，妳的眼睛似乎有比較大囉！！');
-            }
+                if (profile.displayName == '禾火糸韋' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
+                    event.reply('秋緯哥哥，你的髮型一直都是最有型的！！');
+                }
 
-            if (profile.displayName == '禾火糸韋' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
-                event.reply('秋緯哥哥，你的髮型一直都是最有型的！！');
-            }
+                if (profile.displayName == 'Penny' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
+                    event.reply('Penny姐姐，妳的五月天都是歐里桑了！！');
+                }
 
-            if (profile.displayName == 'Penny' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
-                event.reply('Penny姐姐，妳的五月天都是歐里桑了！！');
-            }
+                if (profile.displayName == 'Vicky' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
+                    event.reply('Vicky姐姐，妳可以對我溫柔一點點！！');
+                }
 
-            if (profile.displayName == 'Vicky' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
-                event.reply('Vicky姐姐，妳可以對我溫柔一點點！！');
-            }
-
-            if (profile.displayName == '紀坤宏' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
-                event.reply('哇！紀哥哥 您這偉大 無敵 天才 的大發明家！！');
-            }
-
+                if (profile.displayName == '紀坤宏' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
+                    event.reply('哇！紀哥哥 您這偉大 無敵 天才 的大發明家！！');
+                }
+            });
             switch (event.message.text) {
                 case '空氣':
                     let data;
