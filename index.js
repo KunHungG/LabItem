@@ -153,7 +153,7 @@ bot.on('message', function(event) {
                 }
 
                 if (profile.displayName == 'Penny' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
-                    event.reply('Penny姐姐，妳的五月天都是歐里桑了！！');
+                    event.reply('Penny妹妹，妳的五月天每一首歌，都是經典中的經典，好聽到到讓我想 吹狗雷 吆嗚~~吆嗚~~~~！！');
                 }
 
                 if (profile.displayName == 'Vicky' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
