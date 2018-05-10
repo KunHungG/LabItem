@@ -126,19 +126,19 @@ bot.on('message', function(event) {
 
             if (event.message.text.indexOf('吃什麼') != -1) {
                 event.source.profile().then(function(profile) {
-                    return event.reply('吃大便');
+                    event.reply('吃大便');
                 });
             }
 
             if (events.message.text.indexOf('拉麵') != -1) {
                 event.source.profile().then(function(profile) {
-                    return event.reply('http://anikolife.com/ramen-lazybag/');
+                    event.reply('http://anikolife.com/ramen-lazybag/');
                 });
             }
 
             if (event.message.text.indexOf('查詢') != -1) {
                 event.source.profile().then(function(profile) {
-                    return event.reply('https://www.google.com.tw/search?q=' + event.message.text.substr(3));
+                    event.reply('https://www.google.com.tw/search?q=' + event.message.text.substr(3));
                 });
             }
             /*
