@@ -110,7 +110,7 @@ app.get('*', function(req, res) {
 bot.on('message', function(event) {
     switch (event.message.type) {
         case 'text':
-            if (event.message.text.indexOf('淡水空氣') > 0) {
+            if (event.message.text.indexOf('淡水空氣') != -1) {
                 let data;
                 rp(aqiOpt)
                     .then(function(repos) {
@@ -124,24 +124,22 @@ bot.on('message', function(event) {
                     });
             }
 
-            if (event.message.text.indexOf('吃什麼') > 0) {
+            if (event.message.text.indexOf('吃什麼') != -1) {
                 event.source.profile().then(function(profile) {
                     return event.reply('吃大便');
                 });
             }
 
-            if (events.message.text.indexOf('拉麵') > 0) {
+            if (events.message.text.indexOf('拉麵') != -1) {
                 event.source.profile().then(function(profile) {
                     return event.reply('http://anikolife.com/ramen-lazybag/');
                 });
-                break;
             }
 
-            if (event.message.text.indexOf('查詢') > 0) {
+            if (event.message.text.indexOf('查詢') != -1) {
                 event.source.profile().then(function(profile) {
                     return event.reply('https://www.google.com.tw/search?q=' + event.message.text.substr(3));
                 });
-                break;
             }
             /*
             switch (event.message.text) {
