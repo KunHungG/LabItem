@@ -111,7 +111,7 @@ bot.on('message', function(event) {
     switch (event.message.type) {
         case 'text':
             if (event.message.text.indexOf('查詢') != -1) {
-                event.reply('https://www.google.com.tw/search?q=' + event.message.text.substr(2));
+                event.reply('https://www.google.com.tw/search?q=' + event.message.text.substr(2).replace(' ', '+'));
             }
 
             if (event.message.text.indexOf('淡水空氣') != -1) {
