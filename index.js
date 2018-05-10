@@ -110,6 +110,9 @@ app.get('*', function(req, res) {
 bot.on('message', function(event) {
     switch (event.message.type) {
         case 'text':
+            if (event.message.text.indexOf('查詢') != -1) {
+                event.reply('https://www.google.com.tw/search?q=' + event.message.text.substr(2));
+            }
             switch (event.message.text) {
                 case '空氣':
                     let data;
@@ -145,7 +148,6 @@ bot.on('message', function(event) {
                     });
                     break;
                 default:
-
                     event.source.profile().then(function(profile) {
                         return event.reply(profile.displayName + '說：' + event.message.text);
                     });
