@@ -113,6 +113,25 @@ bot.on('message', function(event) {
             if (event.message.text.indexOf('查詢') != -1) {
                 event.reply('https://www.google.com.tw/search?q=' + event.message.text.substr(2));
             }
+
+            if (event.message.text.indexOf('淡水空氣') != -1) {
+                let data;
+                rp(aqiOpt)
+                    .then(function(repos) {
+                        data = readAQI(repos);
+                        event.reply(data.County + data.SiteName +
+                            '\nPM2.5指數：' + data["PM2.5_AVG"] +
+                            '\n狀態：' + data.Status);
+                    })
+                    .catch(function(err) {
+                        event.reply('無法取得空氣品質資料～');
+                    });
+            }
+
+            if (event.message.text.indexOf('吃什麼') != -1) {
+                event.reply('吃大便');
+            }
+
             switch (event.message.text) {
                 case '空氣':
                     let data;
@@ -142,15 +161,10 @@ bot.on('message', function(event) {
                         return event.reply('http://anikolife.com/ramen-lazybag/');
                     });
                     break;
-                case '吃什麼':
-                    event.source.profile().then(function(profile) {
-                        return event.reply('吃大便');
-                    });
-                    break;
                 default:
-                    event.source.profile().then(function(profile) {
-                        return event.reply(profile.displayName + '說：' + event.message.text);
-                    });
+                    //event.source.profile().then(function(profile) {
+                    //    return event.reply(profile.displayName + '說：' + event.message.text);
+                    //});
                     break;
             }
             break;
