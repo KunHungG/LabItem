@@ -110,6 +110,40 @@ app.get('*', function(req, res) {
 bot.on('message', function(event) {
     switch (event.message.type) {
         case 'text':
+            if (events.message.text.indexOf('淡水空氣') > 0) {
+                let data;
+                rp(aqiOpt)
+                    .then(function(repos) {
+                        data = readAQI(repos);
+                        event.reply(data.County + data.SiteName +
+                            '\nPM2.5指數：' + data["PM2.5_AVG"] +
+                            '\n狀態：' + data.Status);
+                    })
+                    .catch(function(err) {
+                        event.reply('無法取得空氣品質資料～');
+                    });
+            }
+
+            if (events.message.text.indexOf('吃什麼') > 0) {
+                event.source.profile().then(function(profile) {
+                    return event.reply('吃大便');
+                });
+            }
+
+            if (events.message.text.indexOf('拉麵') > 0) {
+                event.source.profile().then(function(profile) {
+                    return event.reply('http://anikolife.com/ramen-lazybag/');
+                });
+                break;
+            }
+
+            if (events.message.text.indexOf('查詢') > 0) {
+                event.source.profile().then(function(profile) {
+                    return event.reply('https://www.google.com.tw/search?q=' + event.message.text.substr(3));
+                });
+                break;
+            }
+            /*
             switch (event.message.text) {
                 case '空氣':
                     let data;
@@ -117,14 +151,13 @@ bot.on('message', function(event) {
                         .then(function(repos) {
                             data = readAQI(repos);
                             event.reply(data.County + data.SiteName +
-                                '\n\nPM2.5指數：' + data["PM2.5_AVG"] +
+                                '\nPM2.5指數：' + data["PM2.5_AVG"] +
                                 '\n狀態：' + data.Status);
                         })
                         .catch(function(err) {
                             event.reply('無法取得空氣品質資料～');
                         });
                     break;
-
                 case 'Me':
                     event.source.profile().then(function(profile) {
                         return event.reply('Hello ' + profile.displayName + ' ' + profile.userId);
@@ -146,18 +179,23 @@ bot.on('message', function(event) {
                     });
                     break;
                 default:
+                    
                     event.source.profile().then(function(profile) {
                         return event.reply(profile.displayName + '說：' + event.message.text);
                     });
+                    
                     break;
             }
+            */
             break;
         case 'sticker':
+            /*
             event.reply({
                 type: 'sticker',
                 packageId: 1,
                 stickerId: 1
             });
+            */
             break;
         default:
             event.reply('Unknow message: ' + JSON.stringify(event));
