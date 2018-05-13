@@ -118,14 +118,14 @@ bot.on('message', function(event) {
                 event.reply('https://www.google.com.tw/search?q=' + event.message.text.substr(event.message.text.indexOf('搜尋') + 2).replace(/\s+/g, '+'));
             }
 
-            if (event.message.text.indexOf('淡水空氣') != -1) {
+            if (event.message.text.indexOf('空氣') != -1) {
                 var mySite;
                 let data;
 
                 mySite = event.message.text.substr(0, event.message.text.indexOf('空氣'));
                 rp(aqiOpt)
                     .then(function(repos) {
-                        data = readAQI(repos, mySite);
+                        data = readAQI(repos, mySite.trim());
                         event.reply(data.County + data.SiteName +
                             '\nPM2.5指數：' + data["PM2.5_AVG"] +
                             '\n狀態：' + data.Status);
