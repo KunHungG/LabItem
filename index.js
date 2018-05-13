@@ -125,7 +125,7 @@ bot.on('message', function(event) {
                 mySite = event.message.text.substr(0, event.message.text.indexOf('空氣') - 1);
                 rp(aqiOpt)
                     .then(function(repos) {
-                        data = readAQI(repos);
+                        data = readAQI(repos, mySite);
                         event.reply(data.County + data.SiteName +
                             '\nPM2.5指數：' + data["PM2.5_AVG"] +
                             '\n狀態：' + data.Status);
