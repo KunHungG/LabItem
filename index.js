@@ -122,7 +122,7 @@ bot.on('message', function(event) {
                 var mySite;
                 let data;
 
-                mySite = event.message.text.substr(0, event.message.text.indexOf('空氣') - 1);
+                mySite = event.message.text.substr(0, event.message.text.indexOf('空氣'));
                 rp(aqiOpt)
                     .then(function(repos) {
                         data = readAQI(repos, mySite);
