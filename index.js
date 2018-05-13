@@ -18,11 +18,11 @@ const bot = linebot({
     channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN
 });
 
-function readAQI(repos) {
+function readAQI(repos, mySite) {
     let data;
 
     for (i in repos) {
-        if (repos[i].SiteName == SITE_NAME) {
+        if (repos[i].SiteName == mySite) {
             data = repos[i];
             break;
         }
@@ -39,7 +39,7 @@ const linebotParser = bot.parser();
 app.get('/', function(req, res) {
     rp(aqiOpt)
         .then(function(repos) {
-            res.render('index', { AQI: readAQI(repos) });
+            res.render('index', { AQI: readAQI(repos, SITE_NAME) });
         })
         .catch(function(err) {
             res.send("無法取得空氣品質資料～");
@@ -79,7 +79,7 @@ app.get('/btn', function(req, res) {
             let data, msg;
             rp(aqiOpt)
                 .then(function(repos) {
-                    data = readAQI(repos);
+                    data = readAQI(repos, SITE_NAME);
                     msg = data.County + data.SiteName +
                         '\n\nPM2.5指數：' + data["PM2.5_AVG"] +
                         '\n狀態：' + data.Status;
@@ -119,7 +119,10 @@ bot.on('message', function(event) {
             }
 
             if (event.message.text.indexOf('淡水空氣') != -1) {
+                var mySite;
                 let data;
+
+                mySite = event.message.text.substr(0, event.message.text.indexOf('空氣') - 1);
                 rp(aqiOpt)
                     .then(function(repos) {
                         data = readAQI(repos);
