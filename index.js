@@ -170,8 +170,8 @@ bot.on('message', function(event) {
                         event.reply('http://www.monaco.com.tw/');
                     }
 
-                    if (event.message.text.indexOf('早餐') != -1) {
-                        event.reply('吃什麼都好！！');
+                    if (event.message.text.indexOf('摩納哥公設') != -1) {
+                        event.reply('https://docs.google.com/spreadsheets/d/1Tq-vzHF0qlhmX2jdO86auwBxCt9VHp4bCucNqrVnHbk/edit#gid=0');
                     }
                 }
             });
