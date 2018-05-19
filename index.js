@@ -169,6 +169,10 @@ bot.on('message', function(event) {
                     } else if (event.message.text.toLowerCase().indexOf('摩納哥') != -1) {
                         event.reply('http://www.monaco.com.tw/');
                     }
+
+                    if (event.message.text.indexOf('早餐') != -1) {
+                        event.reply('吃什麼都好！！');
+                    }
                 }
             });
             switch (event.message.text) {
