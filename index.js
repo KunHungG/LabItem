@@ -136,7 +136,7 @@ bot.on('message', function(event) {
             }
 
             if (event.message.text.indexOf('吃什麼') != -1) {
-                event.reply('吃大便');
+                event.reply('除了大便，什麼都可以。');
             }
 
             if ((event.message.text.indexOf('掛') != -1 || event.message.text.indexOf('請') != -1 || event.message.text.toLowerCase().indexOf('hr') != -1) && (event.message.text.toLowerCase().indexOf(' off') != -1 || event.message.text.indexOf('小時') != -1)) {
@@ -161,6 +161,10 @@ bot.on('message', function(event) {
 
                 if (profile.displayName == 'Vicky' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
                     event.reply('Vicky姐姐，妳可以對我溫柔一點點！！');
+                }
+
+                if (profile.displayName == 'Monica' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
+                    event.reply('韻潔姐姐，妳好啊，妳好可愛啊！可是，妳怎麼都這麼晚下班呢？(心疼)');
                 }
 
                 if (profile.displayName == '紀坤宏') {
