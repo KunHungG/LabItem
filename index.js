@@ -52,7 +52,8 @@ app.get('/btn', function(req, res) {
     }
 
     let id = req.query.id;
-    res.send("id: " + id);
+    let msgtext = req.query.text;
+    res.send("id: " + id + "; text: " + msgtext);
 
     switch (id) {
         case 'wash_dish':
@@ -77,7 +78,7 @@ app.get('/btn', function(req, res) {
         case 'message':
             bot.push(ME, {
                 type: 'text',
-                text: req.query.text
+                text: msgtext
             });
             break;
         case 'air':
