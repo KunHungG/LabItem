@@ -74,7 +74,12 @@ app.get('/btn', function(req, res) {
                 }
             ]);
             break;
-
+        case 'message':
+            bot.push(ME, {
+                type: 'text',
+                text: req.query.text
+            });
+            break;
         case 'air':
             let data, msg;
             rp(aqiOpt)
