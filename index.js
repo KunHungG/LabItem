@@ -52,8 +52,7 @@ app.get('/btn', function(req, res) {
     }
 
     let id = req.query.id;
-    let msgtext = req.query.text;
-    res.send("id: " + id + "; text: " + msgtext);
+    res.send("id: " + id);
 
     switch (id) {
         case 'wash_dish':
@@ -62,7 +61,6 @@ app.get('/btn', function(req, res) {
                 text: '女王呼喚：\n\n快去洗碗！！'
             });
             break;
-
         case 'candy':
             bot.push(ME, [{
                     type: 'text',
@@ -75,10 +73,10 @@ app.get('/btn', function(req, res) {
                 }
             ]);
             break;
-        case 'message':
+        case 'body_enter':
             bot.push(ME, {
                 type: 'text',
-                text: msgtext
+                text: '有人進來了！！'
             });
             break;
         case 'air':
