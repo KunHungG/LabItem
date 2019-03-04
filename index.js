@@ -170,10 +170,13 @@ bot.on('message', function(event) {
                 if (profile.displayName == 'Monica' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
                     event.reply('韻潔姐姐，妳好啊，妳好可愛啊！可是，妳怎麼都這麼晚下班呢？(心疼)');
                 }
+                if (profile.displayName == '曉筠' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
+                    event.reply('曉筠姐姐，妳好啊，妳好可愛啊！可是，妳怎麼都這麼晚下班呢？(心疼)');
+                }
 
                 if (profile.displayName == '紀坤宏') {
                     if (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1) {
-                        event.reply('哇！紀哥哥 您這偉大 無敵 天才 的大發明家！！');
+                        event.reply('哇！紀哥哥 您這偉大 無敵 天才 的大發明家！！！');
                         //} else if (event.message.text.toLowerCase().indexOf('摩納哥') != -1) {
                         //    event.reply('http://www.monaco.com.tw/');
                     }
