@@ -139,6 +139,10 @@ bot.on('message', function(event) {
                     });
             }
 
+            if (event.message.text.indexOf('規劃課要注意聽啊') != -1) {
+                event.reply('是~~~');
+            }
+
             if (event.message.text.indexOf('吃什麼') != -1) {
                 event.reply('除了大便，什麼都可以。');
             }
