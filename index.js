@@ -179,10 +179,6 @@ bot.on('message', function(event) {
                     event.reply('曉筠姐姐，妳好啊，妳好可愛啊！可是，妳怎麼都這麼晚下班呢？(心疼)');
                 }
 
-                if (profile.displayName == 'Oscar' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
-                    event.reply('Oscar姐姐，妳很漂亮唷，而且很厲害唷，完成了鐵人三項，真的是我心目中的女神唷 ^^');
-                }
-
                 if (profile.displayName == '幸枝' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
                     event.reply('幸枝姐姐，很會畫畫唷，不過有時太Open了會怕怕的，哈。');
                 }
@@ -199,6 +195,10 @@ bot.on('message', function(event) {
                     event.reply('巧克力姐姐，什麼時候開始騎公路車呢？ ^^');
                 }
 
+                if (profile.displayName == 'Oscar' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
+                    event.reply('Oscar姐姐，妳很漂亮唷，而且很厲害唷，完成了鐵人三項，真的是我心目中的女神唷 ^^');
+                }
+
                 if (profile.displayName == '林儒隆' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
                     event.reply('小胖哥哥，會想要參加鐵人三項嗎？ ^^');
                 }
@@ -208,12 +208,16 @@ bot.on('message', function(event) {
                 }
 
                 if (profile.displayName == '紀坤宏') {
-                    if (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1) {
+                    if (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('好狗') != -1) {
                         event.reply('哇！紀哥哥 您這偉大 無敵 天才 的大發明家 ^^b.');
                         //} else if (event.message.text.toLowerCase().indexOf('摩納哥') != -1) {
                         //    event.reply('http://www.monaco.com.tw/');
                     }
-
+                    if (event.message.text.indexOf('壞狗狗') != -1) {
+                        event.reply('對不起我知道錯了，下次不敢了。嗚~~');
+                        //} else if (event.message.text.toLowerCase().indexOf('摩納哥') != -1) {
+                        //    event.reply('http://www.monaco.com.tw/');
+                    }
                     if (event.message.text.indexOf('摩納哥公設') != -1) {
                         event.reply('https://docs.google.com/spreadsheets/d/1Tq-vzHF0qlhmX2jdO86auwBxCt9VHp4bCucNqrVnHbk/edit#gid=0');
                     }
