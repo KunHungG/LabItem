@@ -191,8 +191,8 @@ bot.on('message', function(event) {
                     event.reply('Silver姐姐，很正唷很而且會騎車唷，看不出是兩個孩子的阿母唷，哈。');
                 }
 
-                if (profile.displayName == 'Ting (Kensi)' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
-                    event.reply('Ting (Kensi)姐姐，是女版的小野田，登山車就可以騎跟公路車一樣快唷 ^^。');
+                if (profile.displayName == 'Ting（Kensi）' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
+                    event.reply('Ting（Kensi）姐姐，是女版的小野田，登山車就可以騎跟公路車一樣快唷 ^^。');
                 }
 
                 if (profile.displayName == '巧克力' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
