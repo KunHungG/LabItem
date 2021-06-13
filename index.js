@@ -209,7 +209,7 @@ bot.on('message', function(event) {
 
                 if (profile.displayName == '紀坤宏') {
                     if (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1) {
-                        event.reply('哇！紀哥哥 您這偉大 無敵 天才 的大發明家 ^^！！！！！');
+                        event.reply('哇！紀哥哥 您這偉大 無敵 天才 的大發明家 ^^b');
                         //} else if (event.message.text.toLowerCase().indexOf('摩納哥') != -1) {
                         //    event.reply('http://www.monaco.com.tw/');
                     }
