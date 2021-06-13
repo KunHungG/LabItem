@@ -174,13 +174,42 @@ bot.on('message', function(event) {
                 if (profile.displayName == 'Monica' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
                     event.reply('韻潔姐姐，妳好啊，妳好可愛啊！可是，妳怎麼都這麼晚下班呢？(心疼)');
                 }
+
                 if (profile.displayName == '曉筠' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
                     event.reply('曉筠姐姐，妳好啊，妳好可愛啊！可是，妳怎麼都這麼晚下班呢？(心疼)');
                 }
 
+                if (profile.displayName == 'Oscar' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
+                    event.reply('Oscar姐姐，妳很漂亮唷，而且很厲害唷，完成了鐵人三項，真的是我心目中的女神唷 ^^');
+                }
+
+                if (profile.displayName == '幸枝' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
+                    event.reply('幸枝姐姐，很會畫畫唷，不過有時太Open了會怕怕的，哈。');
+                }
+
+                if (profile.displayName == 'Silver' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
+                    event.reply('Silver姐姐，很正唷很而且會騎車唷，看不出是兩個孩子的阿母唷，哈。');
+                }
+
+                if (profile.displayName == 'Ting (Kensi)' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
+                    event.reply('Ting (Kensi)姐姐，是女版的小野田，登山車就可以騎跟公路車一樣快唷 ^^。');
+                }
+
+                if (profile.displayName == '巧克力' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
+                    event.reply('巧克力姐姐，什麼時候開始騎公路車呢？ ^^');
+                }
+
+                if (profile.displayName == '林儒隆' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
+                    event.reply('小胖哥哥，會想要參加鐵人三項嗎？ ^^');
+                }
+
+                if (profile.displayName == 'pony' && (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1)) {
+                    event.reply('教練哥哥，很期待看看你的公路車唷。 ^^');
+                }
+
                 if (profile.displayName == '紀坤宏') {
                     if (event.message.text.toLowerCase().indexOf('watch dog') != -1 || event.message.text.indexOf('狗') != -1) {
-                        event.reply('哇！紀哥哥 您這偉大 無敵 天才 的大發明家！！！');
+                        event.reply('哇！紀哥哥 您這偉大 無敵 天才 的大發明家 ^^！！！！！');
                         //} else if (event.message.text.toLowerCase().indexOf('摩納哥') != -1) {
                         //    event.reply('http://www.monaco.com.tw/');
                     }
